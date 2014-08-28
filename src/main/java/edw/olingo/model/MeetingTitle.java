@@ -1,25 +1,21 @@
 package edw.olingo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "MeetingTitle")
 @Table(name = "informea_meetings_title")
-public class MeetingTitle {
+public class MeetingTitle extends LocalizableString {
 
 	@Id
+    @Column(name = "id")
 	private String id;
 
 	private String language;
 	@Column(length=400)
 	private String title;
 
-	@ManyToOne
-	@JoinColumn(name = "meeting_id", referencedColumnName = "id")
+//	@ManyToOne
+//	@JoinColumn(name = "meeting_id", referencedColumnName = "id")
 	private Meeting meeting;
 	
 	public String getId() {

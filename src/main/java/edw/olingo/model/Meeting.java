@@ -4,16 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "Meeting")
 @Table(name = "informea_meetings")
 public class Meeting {
 
@@ -49,11 +42,11 @@ public class Meeting {
 //	@JoinColumn(name="id", referencedColumnName="meeting_id", updatable=false, nullable=true)
 //	private MeetingTitle meetingTitle;
 
-	
+
 	@OneToMany(mappedBy = "meeting", cascade = CascadeType.ALL)
 	private List<MeetingTitle> titles = new ArrayList<MeetingTitle>();
 
-	public long getId() {
+    public long getId() {
 		return id;
 	}
 

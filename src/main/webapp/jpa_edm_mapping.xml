@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JPAEDMMappingModel xmlns="http://www.apache.org/olingo/odata2/jpa/processor/api/model/mapping">
+    <PersistenceUnit name="persistence_unit">
+        <EDMSchemaNamespace>informea</EDMSchemaNamespace>
+        <JPAEntityTypes>
+            <JPAEntityType name="Meeting">
+                <EDMEntityType>Meeting</EDMEntityType>
+                <EDMEntitySet>Meetings</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="treaty">treaty</JPAAttribute>
+                    <JPAAttribute name="url">url</JPAAttribute>
+                    <JPAAttribute name="start">start</JPAAttribute>
+                    <JPAAttribute name="end">end</JPAAttribute>
+                    <JPAAttribute name="repetition">repetition</JPAAttribute>
+                    <JPAAttribute name="kind">kind</JPAAttribute>
+                    <JPAAttribute name="type">type</JPAAttribute>
+                    <JPAAttribute name="access">access</JPAAttribute>
+                    <JPAAttribute name="status">status</JPAAttribute>
+                    <JPAAttribute name="imageUrl">imageUrl</JPAAttribute>
+                    <JPAAttribute name="imageCopyright">imageCopyright</JPAAttribute>
+                    <JPAAttribute name="location">location</JPAAttribute>
+                    <JPAAttribute name="city">city</JPAAttribute>
+                    <JPAAttribute name="country">country</JPAAttribute>
+                    <JPAAttribute name="latitude">latitude</JPAAttribute>
+                    <JPAAttribute name="longitude">longitude</JPAAttribute>
+                    <JPAAttribute name="updated">updated</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships>
+                    <JPARelationship name="titles">title</JPARelationship>
+                </JPARelationships>
+            </JPAEntityType>
+            <JPAEntityType name="MeetingTitle">
+                <EDMEntityType>MeetingTitle</EDMEntityType>
+                <EDMEntitySet>MeetingTitles</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="title">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                    <!--<JPAAttribute name="id" exclude="true">id</JPAAttribute>-->
+                </JPAAttributes>
+                <JPARelationships></JPARelationships>
+            </JPAEntityType>
+        </JPAEntityTypes>
+        <JPAEmbeddableTypes>
+        </JPAEmbeddableTypes>
+    </PersistenceUnit>
+</JPAEDMMappingModel>
