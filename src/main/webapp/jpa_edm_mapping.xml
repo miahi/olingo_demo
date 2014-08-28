@@ -28,6 +28,7 @@
                 </JPAAttributes>
                 <JPARelationships>
                     <JPARelationship name="titles">title</JPARelationship>
+                    <JPARelationship name="descriptions">description</JPARelationship>
                 </JPARelationships>
             </JPAEntityType>
             <JPAEntityType name="MeetingTitle">
@@ -36,9 +37,17 @@
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
-                    <!--<JPAAttribute name="id" exclude="true">id</JPAAttribute>-->
                 </JPAAttributes>
-                <JPARelationships></JPARelationships>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="MeetingDescription">
+                <EDMEntityType>MeetingDescription</EDMEntityType>
+                <EDMEntitySet>MeetingDescriptions</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="description">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
             </JPAEntityType>
         </JPAEntityTypes>
         <JPAEmbeddableTypes>

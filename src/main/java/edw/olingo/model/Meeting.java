@@ -38,10 +38,8 @@ public class Meeting {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updated;
 
-//	@OneToOne(mappedBy="meeting", fetch=FetchType.EAGER)
-//	@JoinColumn(name="id", referencedColumnName="meeting_id", updatable=false, nullable=true)
-//	private MeetingTitle meetingTitle;
-
+    @OneToMany(mappedBy = "meeting", cascade = CascadeType.ALL)
+    private List<MeetingDescription> descriptions = new ArrayList<MeetingDescription>();
 
 	@OneToMany(mappedBy = "meeting", cascade = CascadeType.ALL)
 	private List<MeetingTitle> titles = new ArrayList<MeetingTitle>();
@@ -198,12 +196,11 @@ public class Meeting {
 		this.titles = titles;
 	}
 
-//	public MeetingTitle getMeetingTitle() {
-//		return meetingTitle;
-//	}
-//
-//	public void setMeetingTitle(MeetingTitle meetingTitle) {
-//		this.meetingTitle = meetingTitle;
-//	}
+    public List<MeetingDescription> getDescriptions() {
+        return descriptions;
+    }
 
+    public void setDescriptions(List<MeetingDescription> descriptions) {
+        this.descriptions = descriptions;
+    }
 }

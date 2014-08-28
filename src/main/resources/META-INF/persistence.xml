@@ -12,7 +12,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 		<!--<class>edw.olingo.model.Manufacturer</class>-->
 		<class>edw.olingo.model.MeetingTitle</class>
 		<class>edw.olingo.model.Meeting</class>
-		<class>edw.olingo.model.LocalizableString</class>
+		<class>edw.olingo.model.MeetingDescription</class>
+		<!--<class>edw.olingo.model.LocalizableString</class>-->
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.37.140/informea?zeroDateTimeBehavior=convertToNull" />
