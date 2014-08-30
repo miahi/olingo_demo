@@ -20,6 +20,9 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
         <class>edw.olingo.model.Site</class>
         <class>edw.olingo.model.SiteName</class>
 
+        <class>edw.olingo.model.CountryReport</class>
+        <class>edw.olingo.model.CountryReportTitle</class>
+
 		<!--<class>edw.olingo.model.LocalizableString</class>-->
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
