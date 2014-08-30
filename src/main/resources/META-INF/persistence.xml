@@ -5,14 +5,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
 	<persistence-unit name="persistence_unit" transaction-type="RESOURCE_LOCAL">
-		<!--<class>edw.olingo.model.Car</class>-->
-		<!--<class>edw.olingo.model.Address</class>-->
-		<!--<class>edw.olingo.model.Driver</class>-->
-		<!--<class>edw.olingo.model.Key</class>-->
-		<!--<class>edw.olingo.model.Manufacturer</class>-->
 		<class>edw.olingo.model.MeetingTitle</class>
 		<class>edw.olingo.model.Meeting</class>
 		<class>edw.olingo.model.MeetingDescription</class>
+
+		<class>edw.olingo.model.DecisionLongTitle</class>
+		<class>edw.olingo.model.DecisionSummary</class>
+		<class>edw.olingo.model.DecisionTitle</class>
+		<class>edw.olingo.model.DecisionKeyword</class>
+		<class>edw.olingo.model.DecisionContent</class>
+		<class>edw.olingo.model.DecisionDocument</class>
+        <class>edw.olingo.model.Decision</class>
 		<!--<class>edw.olingo.model.LocalizableString</class>-->
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

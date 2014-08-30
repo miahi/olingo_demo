@@ -4,18 +4,16 @@ import javax.persistence.*;
 
 @Entity(name = "MeetingTitle")
 @Table(name = "informea_meetings_title")
-public class MeetingTitle extends LocalizableString {
+public class MeetingTitle {
 
 	@Id
     @Column(name = "id")
 	private String id;
 
 	private String language;
-	@Column(length=400)
-	private String title;
+	@Column(length=400, name="title")
+	private String value;
 
-//	@ManyToOne
-//	@JoinColumn(name = "meeting_id", referencedColumnName = "id")
 	private Meeting meeting;
 	
 	public String getId() {
@@ -34,12 +32,12 @@ public class MeetingTitle extends LocalizableString {
 		this.language = language;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getValue() {
+		return value;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	public Meeting getMeeting() {

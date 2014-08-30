@@ -16,9 +16,10 @@ import java.util.logging.Logger;
  * @author Cristian Romanescu {@code cristian.romanescu _at_ eaudeweb.ro}
  * @version 1.4.0, 10/28/2011
  * @since 0.5
+ * @deprecated Not used as it cannot be mapped by olingo
  */
 //@Entity
-public class LocalizableString  {
+public abstract class LocalizableString  {
 
     private static final Logger log = Logger.getLogger(LocalizableString.class.getName());
     @Column(name = "language", nullable = false)

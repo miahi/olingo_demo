@@ -1,5 +1,6 @@
 package edw.olingo.service;
 
+import org.apache.olingo.odata2.api.edm.EdmMultiplicity;
 import org.apache.olingo.odata2.api.edm.EdmSimpleTypeKind;
 import org.apache.olingo.odata2.api.edm.FullQualifiedName;
 import org.apache.olingo.odata2.api.edm.provider.*;
@@ -17,7 +18,6 @@ import java.util.List;
  * User: miahi
  * Date: 8/25/14
  * Time: 9:48 PM
- * @deprecated
  */
 public class JPAExtensionImpl implements JPAEdmExtension {
     @Override
@@ -29,7 +29,6 @@ public class JPAExtensionImpl implements JPAEdmExtension {
 //        //To change body of implemented methods use File | Settings | File Templates.
 //
 //        jpaEdmSchemaView.getEdmSchema().getEntityTypes().add(getLocalizableString());
-        System.out.println("HERE1");
 //        for(EntityType et : jpaEdmSchemaView.getEdmSchema().getEntityTypes() ){
 //            System.out.println(et.getName());
 //            if(et.getName().equals("MeetingTitle")){
@@ -40,30 +39,25 @@ public class JPAExtensionImpl implements JPAEdmExtension {
 //            }
 //        }
 
-    }
+        // Workaround for Olingo multiplicity bug.
+        // The JPA OneToMany relationship is translated as 1 to * for some entities and as 1 to 1 for others.
+        // This makes olingo throw "Requested entity could not be found" errors when accessing the 1:1 entities.
+        // Workaround: if 1:1 multiplicity is found, it forces * on the child
+        // Child is determined by the class prefix (the parent entity name must be a prefix of the child element entity)
 
-    private EntityType getLocalizableString(){
-    // todo add key
-        EntityType entityType = new EntityType();
+        for(Association a : jpaEdmSchemaView.getEdmSchema().getAssociations()) {
+            System.out.println(a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
+            a.getEnd2().getRole() + "(" + a.getEnd2().getMultiplicity() + ")");
 
-        List<Property> properties = new ArrayList<Property>();
-        SimpleProperty property = new SimpleProperty();
+            if(a.getEnd1().getMultiplicity() == EdmMultiplicity.ONE && a.getEnd2().getMultiplicity() == EdmMultiplicity.ONE ) {
+                if(a.getEnd1().getRole().startsWith(a.getEnd2().getRole())){
+                    a.getEnd1().setMultiplicity(EdmMultiplicity.MANY);
+                } else if(a.getEnd2().getRole().startsWith(a.getEnd1().getRole())){
+                    a.getEnd2().setMultiplicity(EdmMultiplicity.MANY);
+                }
+            }
+        }
 
-        property.setName("language");
-        property.setType(EdmSimpleTypeKind.String);
-        properties.add(property);
-
-        property = new SimpleProperty();
-        property.setName("value");
-        property.setType(EdmSimpleTypeKind.String);
-        properties.add(property);
-
-        entityType.setName("LocalizableString");
-        entityType.setProperties(properties);
-
-
-
-        return entityType;
     }
 
     @Override

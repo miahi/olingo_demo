@@ -33,19 +33,99 @@
             </JPAEntityType>
             <JPAEntityType name="MeetingTitle">
                 <EDMEntityType>MeetingTitle</EDMEntityType>
-                <EDMEntitySet>MeetingTitles</EDMEntitySet>
+                <EDMEntitySet>title</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
+                    <JPAAttribute name="value">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="LocalizableString">
+                <EDMEntityType>LocalizableString</EDMEntityType>
+                <EDMEntitySet>LocalizableStrings</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="value">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>
             <JPAEntityType name="MeetingDescription">
                 <EDMEntityType>MeetingDescription</EDMEntityType>
-                <EDMEntitySet>MeetingDescriptions</EDMEntitySet>
+                <EDMEntitySet>description</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="description">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="Decision">
+                <EDMEntityType>Decision</EDMEntityType>
+                <EDMEntitySet>Decisions</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="link">link</JPAAttribute>
+                    <JPAAttribute name="number">number</JPAAttribute>
+                    <JPAAttribute name="status">status</JPAAttribute>
+                    <JPAAttribute name="type">type</JPAAttribute>
+                    <JPAAttribute name="treaty">treaty</JPAAttribute>
+                    <JPAAttribute name="published">published</JPAAttribute>
+                    <JPAAttribute name="updated">updated</JPAAttribute>
+                    <JPAAttribute name="meetingId">meetingId</JPAAttribute>
+                    <JPAAttribute name="meetingTitle">meetingTitle</JPAAttribute>
+                    <JPAAttribute name="meetingUrl">meetingUrl</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships>
+                    <JPARelationship name="titles">title</JPARelationship>
+                    <JPARelationship name="longTitles">longTitle</JPARelationship>
+                    <JPARelationship name="summaries">summary</JPARelationship>
+                    <JPARelationship name="contents">content</JPARelationship>
+                    <JPARelationship name="keywords">keywords</JPARelationship>
+                    <JPARelationship name="documents">documents</JPARelationship>
+                </JPARelationships>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionTitle">
+                <EDMEntityType>DecisionTitle</EDMEntityType>
+                <EDMEntitySet>title</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="title">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionLongTitle">
+                <EDMEntityType>DecisionLongTitle</EDMEntityType>
+                <EDMEntitySet>longTitle</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="longTitle">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionSummary">
+                <EDMEntityType>DecisionSummary</EDMEntityType>
+                <EDMEntitySet>summary</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="summary">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionContent">
+                <EDMEntityType>DecisionContent</EDMEntityType>
+                <EDMEntitySet>content</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="content">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionKeyword">
+                <EDMEntityType>DecisionKeyword</EDMEntityType>
+                <EDMEntitySet>keywords</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="namespace">namespace</JPAAttribute>
+                    <JPAAttribute name="term">term</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>

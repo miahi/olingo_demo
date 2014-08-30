@@ -19,7 +19,7 @@ public class ODataJPAServiceFactoryTest extends ODataJPAServiceFactory {
 		oDataJPAContext.setPageSize(PAGE_SIZE);
 //        oDataJPAContext.setDefaultNaming(true);
 		setDetailErrors(true);
-//        oDataJPAContext.setJPAEdmExtension(new JPAExtensionImpl());
+        oDataJPAContext.setJPAEdmExtension(new JPAExtensionImpl());
 
         oDataJPAContext.setJPAEdmMappingModel("jpa_edm_mapping.xml");
 		return oDataJPAContext;
