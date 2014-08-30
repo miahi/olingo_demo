@@ -129,6 +129,33 @@
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>
+
+            <JPAEntityType name="Site">
+                <EDMEntityType>Site</EDMEntityType>
+                <EDMEntitySet>Sites</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="type">type</JPAAttribute>
+                    <JPAAttribute name="country">country</JPAAttribute>
+                    <JPAAttribute name="treaty">treaty</JPAAttribute>
+                    <JPAAttribute name="url">url</JPAAttribute>
+                    <JPAAttribute name="latitude">latitude</JPAAttribute>
+                    <JPAAttribute name="longitude">longitude</JPAAttribute>
+                    <JPAAttribute name="updated">updated</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships>
+                    <JPARelationship name="names">name</JPARelationship>
+                </JPARelationships>
+            </JPAEntityType>
+            <JPAEntityType name="SiteName">
+                <EDMEntityType>SiteName</EDMEntityType>
+                <EDMEntitySet>name</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="name">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
         </JPAEntityTypes>
         <JPAEmbeddableTypes>
         </JPAEmbeddableTypes>

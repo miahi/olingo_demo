@@ -46,10 +46,11 @@ public class JPAExtensionImpl implements JPAEdmExtension {
         // Child is determined by the class prefix (the parent entity name must be a prefix of the child element entity)
 
         for(Association a : jpaEdmSchemaView.getEdmSchema().getAssociations()) {
-            System.out.println(a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
-            a.getEnd2().getRole() + "(" + a.getEnd2().getMultiplicity() + ")");
 
             if(a.getEnd1().getMultiplicity() == EdmMultiplicity.ONE && a.getEnd2().getMultiplicity() == EdmMultiplicity.ONE ) {
+                System.out.println("Fixed multiplicity for: " + a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
+                        a.getEnd2().getRole() + "(" + a.getEnd2().getMultiplicity() + ")");
+
                 if(a.getEnd1().getRole().startsWith(a.getEnd2().getRole())){
                     a.getEnd1().setMultiplicity(EdmMultiplicity.MANY);
                 } else if(a.getEnd2().getRole().startsWith(a.getEnd1().getRole())){

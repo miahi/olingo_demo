@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  * @deprecated Not used as it cannot be mapped by olingo
  */
 //@Entity
-public abstract class LocalizableString  {
+public class LocalizableString  {
 
     private static final Logger log = Logger.getLogger(LocalizableString.class.getName());
     @Column(name = "language", nullable = false)
