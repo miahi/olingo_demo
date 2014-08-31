@@ -208,6 +208,38 @@
                 <JPARelationships/>
             </JPAEntityType>
 
+            <JPAEntityType name="Contact">
+                <EDMEntityType>Contact</EDMEntityType>
+                <EDMEntitySet>Contacts</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="country">country</JPAAttribute>
+                    <JPAAttribute name="prefix">prefix</JPAAttribute>
+                    <JPAAttribute name="firstName">firstName</JPAAttribute>
+                    <JPAAttribute name="lastName">lastName</JPAAttribute>
+                    <JPAAttribute name="position">position</JPAAttribute>
+                    <JPAAttribute name="institution">institution</JPAAttribute>
+                    <JPAAttribute name="department">department</JPAAttribute>
+                    <JPAAttribute name="address">address</JPAAttribute>
+                    <JPAAttribute name="email">email</JPAAttribute>
+                    <JPAAttribute name="phoneNumber">phone</JPAAttribute>
+                    <JPAAttribute name="fax">fax</JPAAttribute>
+                    <JPAAttribute name="primary">primary</JPAAttribute>
+                    <JPAAttribute name="updated">updated</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships>
+                    <JPARelationship name="treaties">treaties</JPARelationship>
+                </JPARelationships>
+            </JPAEntityType>
+            <JPAEntityType name="ContactTreaty">
+                <EDMEntityType>ContactTreaty</EDMEntityType>
+                <EDMEntitySet>treaty</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="treaty">value</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+
         </JPAEntityTypes>
         <JPAEmbeddableTypes>
         </JPAEmbeddableTypes>
