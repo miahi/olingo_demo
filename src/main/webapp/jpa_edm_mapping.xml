@@ -181,6 +181,33 @@
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>
+
+            <JPAEntityType name="NationalPlan">
+                <EDMEntityType>NationalPlan</EDMEntityType>
+                <EDMEntitySet>NationalPlans</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="country">country</JPAAttribute>
+                    <JPAAttribute name="treaty">treaty</JPAAttribute>
+                    <JPAAttribute name="type">type</JPAAttribute>
+                    <JPAAttribute name="url">url</JPAAttribute>
+                    <JPAAttribute name="submission">submission</JPAAttribute>
+                    <JPAAttribute name="updated">updated</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships>
+                    <JPARelationship name="titles">title</JPARelationship>
+                </JPARelationships>
+            </JPAEntityType>
+            <JPAEntityType name="NationalPlanTitle">
+                <EDMEntityType>NationalPlanTitle</EDMEntityType>
+                <EDMEntitySet>title</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="title">value</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+
         </JPAEntityTypes>
         <JPAEmbeddableTypes>
         </JPAEmbeddableTypes>
