@@ -7,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import edw.olingo.config.DatabaseConfigurator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +24,10 @@ public class JpaTest {
 
 	@Before
 	public void setUp() throws Exception {
-		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-	}
+//		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        DatabaseConfigurator.getInstance().configure();
+        factory = DatabaseConfigurator.getInstance().getFactory();
+    }
 
 //	@Test
 	public void test() throws Exception {

@@ -16,8 +16,8 @@ package edw.olingo.constants;
 
 /**
  * Mime type for a document. InforMEA portal will use one of these predefined constants
- * @see org.informea.odata.IDecision
- * @see org.informea.odata.pojo.DecisionDocument
+ * @see edw.olingo.IDecision
+ * @see edw.olingo.pojo.DecisionDocument
  * @author Cristian Romanescu {@code cristian.romanescu _at_ eaudeweb.ro}
  * @version 1.4.0, 10/28/2011
  * @since 0.5

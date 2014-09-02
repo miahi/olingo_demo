@@ -22,5 +22,7 @@
     <servlet-name>OlingoServlet</servlet-name> 
     <url-pattern>/olingo.svc/*</url-pattern> 
   </servlet-mapping>
-  
+    <listener>
+        <listener-class>edw.olingo.config.ContextListener</listener-class>
+    </listener>
 </web-app>
