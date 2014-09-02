@@ -11,8 +11,7 @@ public class MeetingTitle {
 	private String id;
 
 	private String language;
-	@Column(length=400, name="title")
-	private String value;
+	private String title;
 
 	private Meeting meeting;
 	
@@ -32,12 +31,12 @@ public class MeetingTitle {
 		this.language = language;
 	}
 
-	public String getValue() {
-		return value;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setValue(String value) {
-		this.value = value;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public Meeting getMeeting() {

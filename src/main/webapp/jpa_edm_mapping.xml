@@ -36,7 +36,6 @@
                 <EDMEntitySet>title</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
-                    <JPAAttribute name="value">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
