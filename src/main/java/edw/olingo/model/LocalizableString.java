@@ -16,9 +16,8 @@ import java.util.logging.Logger;
  * @author Cristian Romanescu {@code cristian.romanescu _at_ eaudeweb.ro}
  * @version 1.4.0, 10/28/2011
  * @since 0.5
- * @deprecated Not used as it cannot be mapped by olingo
  */
-//@Entity
+@Entity
 public class LocalizableString  {
 
     private static final Logger log = Logger.getLogger(LocalizableString.class.getName());
@@ -26,15 +25,10 @@ public class LocalizableString  {
     private String language;
 
     @Id
-    @Column(name = "value")
-    private String value;
+    @Column(name = "id")
+    private String id;
 
     public LocalizableString() {
-    }
-
-    public LocalizableString(String language, String value) {
-        this.language = language;
-        this.value = value;
     }
 
     /**
@@ -51,12 +45,12 @@ public class LocalizableString  {
     /**
      * @return Value of this string
      */
-    public String getTitle() {
-        return value;
+    public String getId() {
+        return id;
     }
 
-    public void setTitle(String value) {
-        this.value = value;
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

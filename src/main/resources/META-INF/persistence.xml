@@ -29,12 +29,12 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
         <class>edw.olingo.model.Contact</class>
         <class>edw.olingo.model.ContactTreaty</class>
 
-		<!--<class>edw.olingo.model.LocalizableString</class>-->
+		<class>edw.olingo.model.LocalizableString</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.37.140/informea?zeroDateTimeBehavior=convertToNull" />
-			<property name="javax.persistence.jdbc.user" value="miahi" />
-			<property name="javax.persistence.jdbc.password" value="miahi" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/informea?zeroDateTimeBehavior=convertToNull" />
+			<property name="javax.persistence.jdbc.user" value="informea" />
+			<property name="javax.persistence.jdbc.password" value="informea" />
 
 			<!-- EclipseLink should create the database schema automatically -->
 			<!--<property name="eclipselink.ddl-generation" value="create-tables" />-->

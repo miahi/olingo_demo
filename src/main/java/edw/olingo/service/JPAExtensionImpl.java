@@ -26,27 +26,25 @@ public class JPAExtensionImpl implements JPAEdmExtension {
 
     @Override
     public void extendJPAEdmSchema(JPAEdmSchemaView jpaEdmSchemaView) {
-//        //To change body of implemented methods use File | Settings | File Templates.
-//
-//        jpaEdmSchemaView.getEdmSchema().getEntityTypes().add(getLocalizableString());
-//        for(EntityType et : jpaEdmSchemaView.getEdmSchema().getEntityTypes() ){
-//            System.out.println(et.getName());
-//            if(et.getName().equals("MeetingTitle")){
-//                et.setBaseType(new FullQualifiedName("persistence_unit","LocalizableString"));
-//                et.setProperties(new ArrayList<Property>());
-//                et.setKey(null);
-//                et.setNavigationProperties(new ArrayList<NavigationProperty>());
-//            }
-//        }
+		for (EntityType e : jpaEdmSchemaView.getEdmSchema().getEntityTypes()) {
+			switch (e.getName()) {
+			case "MeetingTitle":
+			case "DecisionTitle":
+			case "NationalPlanTitle":
+			case "MeetingDescription":
+			case "DecisionLongTitle":
+			case "CountryReportTitle":
+				FullQualifiedName baseType = new FullQualifiedName("informea", "LocalizableString");
+				e.setBaseType(baseType);
+			}
+		}
 
         // Workaround for Olingo multiplicity bug.
         // The JPA OneToMany relationship is translated as 1 to * for some entities and as 1 to 1 for others.
         // This makes olingo throw "Requested entity could not be found" errors when accessing the 1:1 entities.
         // Workaround: if 1:1 multiplicity is found, it forces * on the child
         // Child is determined by the class prefix (the parent entity name must be a prefix of the child element entity)
-
         for(Association a : jpaEdmSchemaView.getEdmSchema().getAssociations()) {
-
             if(a.getEnd1().getMultiplicity() == EdmMultiplicity.ONE && a.getEnd2().getMultiplicity() == EdmMultiplicity.ONE ) {
                 System.out.println("Fixed multiplicity for: " + a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
                         a.getEnd2().getRole() + "(" + a.getEnd2().getMultiplicity() + ")");

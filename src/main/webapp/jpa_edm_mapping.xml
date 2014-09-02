@@ -33,7 +33,7 @@
             </JPAEntityType>
             <JPAEntityType name="MeetingTitle">
                 <EDMEntityType>MeetingTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>MeetingTitles</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -44,14 +44,14 @@
                 <EDMEntityType>LocalizableString</EDMEntityType>
                 <EDMEntitySet>LocalizableStrings</EDMEntitySet>
                 <JPAAttributes>
-                    <JPAAttribute name="value">value</JPAAttribute>
+                    <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>
             <JPAEntityType name="MeetingDescription">
                 <EDMEntityType>MeetingDescription</EDMEntityType>
-                <EDMEntitySet>description</EDMEntitySet>
+                <EDMEntitySet>MeetingDescriptions</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="description">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -85,7 +85,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionTitle">
                 <EDMEntityType>DecisionTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>DecisionTitles</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -94,7 +94,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionLongTitle">
                 <EDMEntityType>DecisionLongTitle</EDMEntityType>
-                <EDMEntitySet>longTitle</EDMEntitySet>
+                <EDMEntitySet>DecisionLongTitles</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="longTitle">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -103,7 +103,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionSummary">
                 <EDMEntityType>DecisionSummary</EDMEntityType>
-                <EDMEntitySet>summary</EDMEntitySet>
+                <EDMEntitySet>DecisionSummaries</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="summary">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -112,7 +112,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionContent">
                 <EDMEntityType>DecisionContent</EDMEntityType>
-                <EDMEntitySet>content</EDMEntitySet>
+                <EDMEntitySet>DecisionContents</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="content">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -121,7 +121,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionKeyword">
                 <EDMEntityType>DecisionKeyword</EDMEntityType>
-                <EDMEntitySet>keywords</EDMEntitySet>
+                <EDMEntitySet>DecisionKeywords</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="namespace">namespace</JPAAttribute>
                     <JPAAttribute name="term">term</JPAAttribute>
@@ -148,7 +148,7 @@
             </JPAEntityType>
             <JPAEntityType name="SiteName">
                 <EDMEntityType>SiteName</EDMEntityType>
-                <EDMEntitySet>name</EDMEntitySet>
+                <EDMEntitySet>SiteNames</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="name">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -173,7 +173,7 @@
             </JPAEntityType>
             <JPAEntityType name="CountryReportTitle">
                 <EDMEntityType>CountryReportTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>CountryReportTitles</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="name">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -199,7 +199,7 @@
             </JPAEntityType>
             <JPAEntityType name="NationalPlanTitle">
                 <EDMEntityType>NationalPlanTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>NationalPlanTitles</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -232,7 +232,7 @@
             </JPAEntityType>
             <JPAEntityType name="ContactTreaty">
                 <EDMEntityType>ContactTreaty</EDMEntityType>
-                <EDMEntitySet>treaty</EDMEntitySet>
+                <EDMEntitySet>ContactTreaties</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="treaty">value</JPAAttribute>
                 </JPAAttributes>
