@@ -25,18 +25,6 @@ public class InformeaJPAExtension implements JPAEdmExtension {
 
     @Override
     public void extendJPAEdmSchema(JPAEdmSchemaView jpaEdmSchemaView) {
-//        //To change body of implemented methods use File | Settings | File Templates.
-//
-//        jpaEdmSchemaView.getEdmSchema().getEntityTypes().add(getLocalizableString());
-//        for(EntityType et : jpaEdmSchemaView.getEdmSchema().getEntityTypes() ){
-//            System.out.println(et.getName());
-//            if(et.getName().equals("MeetingTitle")){
-//                et.setBaseType(new FullQualifiedName("persistence_unit","LocalizableString"));
-//                et.setProperties(new ArrayList<Property>());
-//                et.setKey(null);
-//                et.setNavigationProperties(new ArrayList<NavigationProperty>());
-//            }
-//        }
 
         // Workaround for Olingo multiplicity bug.
         // The JPA OneToMany relationship is translated as 1 to * for some entities and as 1 to 1 for others.
@@ -57,6 +45,9 @@ public class InformeaJPAExtension implements JPAEdmExtension {
                 }
             }
         }
+
+        // set the container name (the default is namespace + "Container")
+        jpaEdmSchemaView.getJPAEdmEntityContainerView().getEdmEntityContainer().setName("InforMEAService");
 
     }
 
