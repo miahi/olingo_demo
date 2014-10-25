@@ -80,7 +80,7 @@
                     <JPARelationship name="summaries">summary</JPARelationship>
                     <JPARelationship name="contents">content</JPARelationship>
                     <JPARelationship name="keywords">keywords</JPARelationship>
-                    <JPARelationship name="documents">documents</JPARelationship>
+                    <JPARelationship name="files">files</JPARelationship>
                 </JPARelationships>
             </JPAEntityType>
             <JPAEntityType name="DecisionTitle">
@@ -125,6 +125,18 @@
                 <JPAAttributes>
                     <JPAAttribute name="namespace">namespace</JPAAttribute>
                     <JPAAttribute name="term">term</JPAAttribute>
+                </JPAAttributes>
+                <JPARelationships/>
+            </JPAEntityType>
+            <JPAEntityType name="DecisionFile">
+                <EDMEntityType>DecisionFile</EDMEntityType>
+                <EDMEntitySet>files</EDMEntitySet>
+                <JPAAttributes>
+                    <JPAAttribute name="id">id</JPAAttribute>
+                    <JPAAttribute name="url">url</JPAAttribute>
+                    <JPAAttribute name="mimeType">mimeType</JPAAttribute>
+                    <JPAAttribute name="language">language</JPAAttribute>
+                    <JPAAttribute name="filename">filename</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
             </JPAEntityType>

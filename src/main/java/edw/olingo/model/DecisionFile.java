@@ -30,7 +30,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="informea_decisions_documents")
 @Cacheable
-public class DecisionDocument {
+public class DecisionFile {
 
     @Id
     @Column(name = "id")
@@ -38,9 +38,11 @@ public class DecisionDocument {
 
     private Decision decision;
 
-    private String diskPath;
+//    private String diskPath;
     private String url;
+    @Column (nullable = false)
     private String mimeType;
+    @Column (nullable = false)
     private String language;
     private String filename;
 
@@ -61,13 +63,13 @@ public class DecisionDocument {
         this.decision = decision;
     }
 
-    public String getDiskPath() {
-        return diskPath;
-    }
-
-    public void setDiskPath(String diskPath) {
-        this.diskPath = diskPath;
-    }
+//    public String getDiskPath() {
+//        return diskPath;
+//    }
+//
+//    public void setDiskPath(String diskPath) {
+//        this.diskPath = diskPath;
+//    }
 
     public String getUrl() {
         return url;

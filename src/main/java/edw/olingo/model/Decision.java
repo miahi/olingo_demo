@@ -74,7 +74,7 @@ public class Decision {
     private List<DecisionKeyword> keywords = new ArrayList<DecisionKeyword>();
 
     @OneToMany(mappedBy = "decision", cascade = CascadeType.ALL)
-    private List<DecisionDocument> documents = new ArrayList<DecisionDocument>();
+    private List<DecisionFile> files = new ArrayList<DecisionFile>();
 
     public String getId() {
         return id;
