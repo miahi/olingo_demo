@@ -1,17 +1,12 @@
 package edw.olingo.service;
 
 import org.apache.olingo.odata2.api.edm.EdmMultiplicity;
-import org.apache.olingo.odata2.api.edm.EdmSimpleTypeKind;
-import org.apache.olingo.odata2.api.edm.FullQualifiedName;
 import org.apache.olingo.odata2.api.edm.provider.*;
 import org.apache.olingo.odata2.jpa.processor.api.model.JPAEdmExtension;
 import org.apache.olingo.odata2.jpa.processor.api.model.JPAEdmSchemaView;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +14,11 @@ import java.util.List;
  * Date: 8/25/14
  * Time: 9:48 PM
  */
-public class JPAExtensionImpl implements JPAEdmExtension {
+public class InformeaJPAExtension implements JPAEdmExtension {
+
+    private static final Logger log = Logger.getLogger(InformeaJPAExtension.class.getName());
+
+
     @Override
     public void extendWithOperation(JPAEdmSchemaView jpaEdmSchemaView) {
     }
@@ -48,7 +47,7 @@ public class JPAExtensionImpl implements JPAEdmExtension {
         for(Association a : jpaEdmSchemaView.getEdmSchema().getAssociations()) {
 
             if(a.getEnd1().getMultiplicity() == EdmMultiplicity.ONE && a.getEnd2().getMultiplicity() == EdmMultiplicity.ONE ) {
-                System.out.println("Fixed multiplicity for: " + a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
+                log.finest("Fixed multiplicity for: " + a.getName() + " " + a.getEnd1().getRole() + "(" + a.getEnd1().getMultiplicity() +")  " +
                         a.getEnd2().getRole() + "(" + a.getEnd2().getMultiplicity() + ")");
 
                 if(a.getEnd1().getRole().startsWith(a.getEnd2().getRole())){

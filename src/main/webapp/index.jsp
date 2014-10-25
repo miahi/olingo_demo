@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Informea Olingo service</h2>
 </body>
 </html>

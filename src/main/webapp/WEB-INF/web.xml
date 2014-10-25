@@ -14,7 +14,7 @@
     </init-param>
   <init-param>
        <param-name>org.apache.olingo.odata2.service.factory</param-name> 
-       <param-value>edw.olingo.service.ODataJPAServiceFactoryTest</param-value> 
+       <param-value>edw.olingo.service.InformeaODataJPAServiceFactory</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup> 
   </servlet>
