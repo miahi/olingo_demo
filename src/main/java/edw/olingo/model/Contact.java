@@ -44,6 +44,7 @@ public class Contact {
     private String email;
     private String phoneNumber;
     private String fax;
+    private String type;
 
     // primary is a reserved word in MySQL
     @Column (name="\"primary\"")
@@ -173,5 +174,13 @@ public class Contact {
 
     public void setTreaties(List<ContactTreaty> treaties) {
         this.treaties = treaties;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
