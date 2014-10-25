@@ -15,7 +15,7 @@ public class InformeaODataJPAServiceFactory extends org.apache.olingo.odata2.jpa
 		ODataJPAContext oDataJPAContext = getODataJPAContext();
 		oDataJPAContext.setEntityManagerFactory(JPAEntityManagerFactory.getEntityManagerFactory(PUNIT_NAME));
 		oDataJPAContext.setPersistenceUnitName(PUNIT_NAME);
-		oDataJPAContext.setPageSize(PAGE_SIZE);
+//		oDataJPAContext.setPageSize(PAGE_SIZE);
 //        oDataJPAContext.setDefaultNaming(true);
 		setDetailErrors(true);
         oDataJPAContext.setJPAEdmExtension(new InformeaJPAExtension());

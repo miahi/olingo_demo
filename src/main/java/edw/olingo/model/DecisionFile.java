@@ -95,11 +95,7 @@ public class DecisionFile {
         this.filename = filename;
     }
 
-    public MimeType getMimeType() {
-        MimeType ret = MimeType.fromString(mimeType);
-        if(ret == null) {
-            throw new InvalidValueException(String.format("Invalid 'mimeType' value. Each document must have valid value for 'mimeType' (Affected document with ID:%s)", id));
-        }
-        return ret;
+    public String getMimeType() {
+        return mimeType;
     }
 }

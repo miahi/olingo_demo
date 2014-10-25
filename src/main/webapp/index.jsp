@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Informea Olingo service</h2>
+<h2>InforMEA OData service</h2>
 </body>
 </html>

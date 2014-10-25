@@ -14,9 +14,6 @@
  */
 package edw.olingo.model;
 
-import edw.olingo.InvalidValueException;
-import edw.olingo.constants.Treaty;
-
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -52,11 +49,8 @@ public class CountryReport {
     @OneToMany(mappedBy = "country_report", cascade= CascadeType.ALL)
     private List<CountryReportTitle> titles;
 
-    public Treaty getTreaty() {
-        if(treaty == null || treaty.isEmpty()) {
-            throw new InvalidValueException(String.format("'treaty' property cannot be null (Affected country report with ID:%s)", id));
-        }
-        return Treaty.getTreaty(treaty);
+    public String getTreaty() {
+        return treaty;
     }
 
     public String getId() {

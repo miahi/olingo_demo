@@ -2,6 +2,7 @@
 <JPAEDMMappingModel xmlns="http://www.apache.org/olingo/odata2/jpa/processor/api/model/mapping">
     <PersistenceUnit name="persistence_unit">
         <EDMSchemaNamespace>informea</EDMSchemaNamespace>
+
         <JPAEntityTypes>
             <JPAEntityType name="Meeting">
                 <EDMEntityType>Meeting</EDMEntityType>
@@ -33,7 +34,7 @@
             </JPAEntityType>
             <JPAEntityType name="MeetingTitle">
                 <EDMEntityType>MeetingTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>MeetingTitle</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -85,7 +86,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionTitle">
                 <EDMEntityType>DecisionTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>DecisionTitle</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -130,7 +131,7 @@
             </JPAEntityType>
             <JPAEntityType name="DecisionFile">
                 <EDMEntityType>DecisionFile</EDMEntityType>
-                <EDMEntitySet>files</EDMEntitySet>
+                <EDMEntitySet>DecisionFile</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="id">id</JPAAttribute>
                     <JPAAttribute name="url">url</JPAAttribute>
@@ -185,7 +186,7 @@
             </JPAEntityType>
             <JPAEntityType name="CountryReportTitle">
                 <EDMEntityType>CountryReportTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>CountryReportTitle</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="name">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
@@ -211,7 +212,7 @@
             </JPAEntityType>
             <JPAEntityType name="NationalPlanTitle">
                 <EDMEntityType>NationalPlanTitle</EDMEntityType>
-                <EDMEntitySet>title</EDMEntitySet>
+                <EDMEntitySet>NationalPlanTitle</EDMEntitySet>
                 <JPAAttributes>
                     <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>

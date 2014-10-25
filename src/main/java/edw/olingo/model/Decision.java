@@ -14,9 +14,6 @@
  */
 package edw.olingo.model;
 
-import edw.olingo.InvalidValueException;
-import edw.olingo.constants.Treaty;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -81,9 +78,6 @@ public class Decision {
     }
 
     public String getLink() {
-        if (this.link != null && !this.link.toLowerCase().startsWith("http://")) {
-            throw new InvalidValueException(String.format("'link' property must start with 'http://' (Affected decision with ID:%s)", id));
-        }
         return link;
     }
 
@@ -96,25 +90,15 @@ public class Decision {
     }
 
     public String getNumber() {
-        if (this.number != null && !"".equals(this.number.trim())) {
-            return this.number;
-        } else {
-            throw new InvalidValueException(String.format("'number' cannot be null or empty (Affected decision with ID:%s)", id));
-        }
+        return this.number;
     }
 
-    public Treaty getTreaty() {
-        if (treaty == null || treaty.isEmpty()) {
-            throw new InvalidValueException(String.format("'treaty' property cannot be null (Affected decision with ID:%s)", id));
-        }
-        return Treaty.getTreaty(treaty);
+    public String getTreaty() {
+        return treaty;
     }
 
     public Date getPublished() {
-        if (this.published != null) {
-            return this.published;
-        }
-        throw new InvalidValueException(String.format("'published' property cannot be null (Affected decision with ID:%s)", id));
+        return this.published;
     }
 
     public Date getUpdated() {
