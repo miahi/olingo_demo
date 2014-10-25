@@ -14,9 +14,6 @@
  */
 package edw.olingo.model;
 
-import edw.olingo.InvalidValueException;
-import edw.olingo.constants.MimeType;
-
 import javax.persistence.*;
 
 
