@@ -37,6 +37,7 @@ public class Contact {
     private String prefix;
     private String firstName;
     private String lastName;
+    private String type;
     private String position;
     private String institution;
     private String department;
@@ -44,11 +45,10 @@ public class Contact {
     private String email;
     private String phoneNumber;
     private String fax;
-    private String type;
 
     // primary is a reserved word in MySQL
     @Column (name="\"primary\"")
-    private Boolean primary;
+    private int primary;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date updated;
@@ -152,11 +152,11 @@ public class Contact {
         this.fax = fax;
     }
 
-    public Boolean getPrimary() {
+    public int getPrimary() {
         return primary;
     }
 
-    public void setPrimary(Boolean primary) {
+    public void setPrimary(int primary) {
         this.primary = primary;
     }
 
