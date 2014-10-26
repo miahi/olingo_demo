@@ -188,7 +188,7 @@
                 <EDMEntityType>CountryReportTitle</EDMEntityType>
                 <EDMEntitySet>CountryReportTitle</EDMEntitySet>
                 <JPAAttributes>
-                    <JPAAttribute name="name">value</JPAAttribute>
+                    <JPAAttribute name="title">value</JPAAttribute>
                     <JPAAttribute name="language">language</JPAAttribute>
                 </JPAAttributes>
                 <JPARelationships/>
